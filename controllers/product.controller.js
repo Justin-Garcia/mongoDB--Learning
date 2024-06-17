@@ -20,6 +20,7 @@ const getProduct = async (req, res) => {
     }
 };
 
+// create a product
 const createProduct = async (req, res) => {
     try {
         const product = await Product.create(req.body);
@@ -29,6 +30,7 @@ const createProduct = async (req, res) => {
     }
 };
 
+// update a product
 const updateProduct = async (req, res) => {
     try {
         const { id } = req.params;
@@ -46,6 +48,7 @@ const updateProduct = async (req, res) => {
     }
 };
 
+// delete a product
 const deleteProduct = async (req, res) => {
     try {
         const { id } = req.params;

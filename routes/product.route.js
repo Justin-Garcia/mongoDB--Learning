@@ -6,5 +6,11 @@ const { getProducts, getProduct, createProduct, updateProduct, deleteProduct } =
 router.get('/', getProducts);
 router.get('/:id', getProduct);
 router.post('/', createProduct);
+
+// update a product
 router.put('/:id', updateProduct);
+
+// delete a product
 router.delete('/:id', deleteProduct);
+
+module.exports = router; // export the router to be used in the index.js file

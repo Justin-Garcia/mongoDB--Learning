@@ -1,8 +1,12 @@
-const express = require('express'); // import express
-const mongoose = require('mongoose'); // import mongoose
-const Product = require('./models/product.model'); // import the Product model
+const express = require('express'); 
+const mongoose = require('mongoose'); 
+
+const Product = require('./models/product.model.js'); 
+const productRoute = require('./routes/product.route.js'); 
+
 const app = express(); // create express app
-require('dotenv').config(); // import dotenv
+
+require('dotenv').config(); // utilize the dotenv package to import the env variables
 // MISTAKE: Use the const '' = require('') syntax to import the models | Be sure to define app to run the server
 
 // Middleware

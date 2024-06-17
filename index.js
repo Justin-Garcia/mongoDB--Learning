@@ -2,9 +2,13 @@ const express = require('express'); // import express
 const mongoose = require('mongoose'); // import mongoose
 const Product = require('./models/product.model'); // import the Product model
 const app = express(); // create express app
-app.use(express.json()); // use express to parse JSON
 require('dotenv').config(); // import dotenv
 // MISTAKE: Use the const '' = require('') syntax to import the models | Be sure to define app to run the server
+
+// Middleware
+app.use(express.json()); // use express to parse JSON
+app.use(express.urlencoded({extended: false})); // Allow form data to add products
+
 
 // Define the user and password for the database from the .env file
 dbUser = process.env.DB_USER;

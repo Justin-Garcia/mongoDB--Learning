@@ -72,5 +72,3 @@ module.exports = {
     deleteProduct
 };
 
-//PROBLEM Cannot PUT api/product/ | SOLUTION: Add a forward slash at the begining of the route
-//PROBLEM:"Cannot access 'product' before initialization" | SOLUTION: Define product before the if statement

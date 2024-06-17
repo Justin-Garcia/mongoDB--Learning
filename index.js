@@ -7,7 +7,6 @@ const productRoute = require('./routes/product.route.js');
 const app = express(); // create express app
 
 require('dotenv').config(); // utilize the dotenv package to import the env variables
-// MISTAKE: Use the const '' = require('') syntax to import the models | Be sure to define app to run the server
 
 // Middleware
 app.use(express.json()); // use express to parse JSON
@@ -39,5 +38,4 @@ mongoose.connect((`mongodb+srv://${dbUser}:${dbPassword}@learningdb.dhuzt.mongod
     .catch((err) => {
         console.log('Failed to connect to MongoDB', err);
     });
-// PROBLEM: Unable to use the env variable to connect to the database through the string | had to install dotenv, and use the require('dotenv').config() to import the env variables
 
